@@ -2,9 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 #username n password and course id
-user = "your tcs username"
-pswd = "your tcs pasword"
-c_id = "2017-it-batch0143"
+user = "your tcs id"
+pswd = "your tcs passwd"
+c_id = "your tcs batch"
 
 #subject dictionaries
 sub_dict = {"bct":"17BTIT731","ds":"17BTIT701","dsl":"17BTIT712","ml":"17BTIT703","mll":"17BTIT711","pcd":"17BTIT702","wsn":"17BTIT737"}
@@ -39,9 +39,9 @@ sub.click()
 join_btns =  driver.find_elements_by_link_text("Join Now")
 if len(join_btns)>=1:
     
-    for i in join_btn:
+    for i in join_btns:
         print(i)
-    join_btn[0].click()
+    join_btns[0].click()
 
     sleep(4)
 
@@ -49,13 +49,14 @@ if len(join_btns)>=1:
 
     sleep(2)
 
-    print('switching to virtual classrom')
+    print('switching to virtual classroom')
 
     driver.switch_to.window(driver.window_handles[1])
 
     print(driver.title)
     print(" Getting into the arena of ",subject)
     sleep(3)
+    driver.find_element_by_xpath('/html/body/div[1]/div/div/div[5]/button[2]').click()
 else:
     print('no {} lecture scheduled tell your {} teacher'.format(subject,subject))
 
