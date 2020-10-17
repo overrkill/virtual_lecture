@@ -1,3 +1,10 @@
+#Author Overrkill
+#script to automate login 
+#instructions
+#add your userid & password
+#add your course id 
+#copy path to your chromedriver
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import sleep
@@ -12,7 +19,9 @@ sub_dict = {"bct":"17BTIT731","ds":"17BTIT701","dsl":"17BTIT712","ml":"17BTIT703
 
 subject = input("which subject (bct ,ds ,dsl ,ml ,mll ,pcd ,wsn) \n you got a single chance bro\n").lower()
 
-driver = webdriver.Chrome()
+#Replace your path to chrome driver
+driver = webdriver.Chrome(r"C:\Users\abhik\Downloads\chromedriver_win32\chromedriver.exe")
+
 driver.get("https://www.tcsion.com/LX/login#lx")
 uname = driver.find_element_by_xpath('//*[@id="Usrname"]')
 uname.send_keys(user)
