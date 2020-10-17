@@ -20,7 +20,7 @@ sub_dict = {"bct":"17BTIT731","ds":"17BTIT701","dsl":"17BTIT712","ml":"17BTIT703
 subject = input("which subject (bct ,ds ,dsl ,ml ,mll ,pcd ,wsn) \n you got a single chance bro\n").lower()
 
 #Replace your path to chrome driver
-driver = webdriver.Chrome(r"C:\Users\abhik\Downloads\chromedriver_win32\chromedriver.exe")
+driver = webdriver.Chrome(r"path\to\your\chromedriver.exe")
 
 driver.get("https://www.tcsion.com/LX/login#lx")
 uname = driver.find_element_by_xpath('//*[@id="Usrname"]')
