@@ -1,1 +1,1 @@
-automating lectures *only for educational puposes 
+automating  *only for educational puposes* 
